@@ -17,6 +17,21 @@ public class UserServiceImpl implements UserService {
     private UserRepository  userRepository;
 
     @Override
+    public List<User> findByUsernameContaining(String username) {
+        return userRepository.findByUsernameContaining(username);
+    }
+
+    @Override
+    public List<User> findByEmailContaining(String email) {
+        return userRepository.findByEmailContaining(email);
+    }
+
+    @Override
+    public List<User> findByPhoneContaining(String phone) {
+        return userRepository.findByPhoneContaining(phone);
+    }
+
+    @Override
     public <S extends User> List<S> findAll(Example<S> example) {
         return userRepository.findAll(example);
     }
@@ -34,5 +49,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<User> findByUsernameAndPassword(String username, String password) {
         return userRepository.findByUsernameAndPassword(username, password);
+    }
+
+    @Override
+    public Optional<User> findById(Integer integer) {
+        return userRepository.findById(integer);
+    }
+
+    @Override
+    public List<User> findAll() {
+        return userRepository.findAll();
     }
 }

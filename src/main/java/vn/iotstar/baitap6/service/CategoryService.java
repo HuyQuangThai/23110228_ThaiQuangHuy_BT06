@@ -9,6 +9,8 @@ import java.util.Optional;
 public interface CategoryService {
     List<Category> findByCategoryNameContaining(String categoryName);
 
+    void deleteById(Integer integer);
+
     List<Category> findAll();
 
     <S extends Category> List<S> findAll(Example<S> example);

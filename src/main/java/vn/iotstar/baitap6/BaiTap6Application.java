@@ -4,7 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.filter.CharacterEncodingFilter;
 import vn.iotstar.baitap6.configs.MySiteMeshFilter;
+
+import java.util.logging.Filter;
 
 @SpringBootApplication
 public class BaiTap6Application {

@@ -14,5 +14,6 @@ public class UserModel {
     private String email;
     private String phone;
     private String fullName;
-    private int role;
+    private String images;
+    private Integer role;
 }

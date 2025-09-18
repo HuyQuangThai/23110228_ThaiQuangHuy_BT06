@@ -12,4 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 public class CategoryModel {
     List<Category> categories;
+    String categoryName;
+    String images;
+    Integer id;
 }

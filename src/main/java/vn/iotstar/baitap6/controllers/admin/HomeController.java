@@ -11,8 +11,8 @@ public class HomeController {
     public void setDefaultAttribute(Model model) {
         model.addAttribute("home","home");
         model.addAttribute("category","category");
-        model.addAttribute("user","user");
-        model.addAttribute("video","video");
+        model.addAttribute("user","/admin/user");
+        model.addAttribute("video","/admin/video");
 
         model.addAttribute("active_home","active");
         model.addAttribute("active_category","");

@@ -7,6 +7,6 @@ import vn.iotstar.baitap6.entity.Video;
 import java.util.List;
 
 @Repository
-public interface VideoRespository extends JpaRepository<Video,Integer> {
+public interface VideoRepository extends JpaRepository<Video,Integer> {
     List<Video> findByVideoNameContaining(String videoName);
 }

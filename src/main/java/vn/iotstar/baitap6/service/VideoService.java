@@ -3,6 +3,7 @@ package vn.iotstar.baitap6.service;
 import vn.iotstar.baitap6.entity.Video;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface VideoService {
     List<Video> findByVideoNameContaining(String videoName);
@@ -12,4 +13,6 @@ public interface VideoService {
     void deleteById(Integer integer);
 
     List<Video> findAll();
+
+    Optional<Video> findById(Integer integer);
 }

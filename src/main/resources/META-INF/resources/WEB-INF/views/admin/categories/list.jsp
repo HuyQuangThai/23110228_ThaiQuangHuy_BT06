@@ -47,10 +47,17 @@
 
 </style>
 <div class="container mt-5 main-content">
-    <div class="d-flex justify-content-between">
-        <h2 class="mb-4">Danh Sách Danh Mục</h2>
+    <div class="d-flex justify-content-between align-items-center mb-4 w-100">
+        <h2 class="mb-0">Danh Sách Danh Mục</h2>
+        <form action="${pageContext.request.contextPath}/admin/category/search" method="get" class="flex-grow-2">
+            <input type="text" name="keyword" class="form-control" placeholder="Nhập từ khóa tìm kiếm" />
+        </form>
         <a href="${pageContext.request.contextPath}/admin/category/add"
-           class="btn btn-primary mb-3 d-flex justify-content-center align-items-center">Thêm Danh Mục Mới</a>
+           class="btn btn-primary d-flex justify-content-center align-items-center me-3">
+            Thêm danh mục mới
+        </a>
+
+    </div>
     </div>
     <div class="table-responsive">
         <table class="table table-bordered">
@@ -72,7 +79,7 @@
                             value="${cate.images.substring(0,5) =='https' ? cate.images : '/image?fname=' += cate.images}"
                             var="imgUrl" /> <img src="${imgUrl}"
                                                  class="table-img" alt="Category Image" /></td>
-                    <td>${cate.categoryId}</td>
+                    <td>${cate.id}</td>
                     <td>${cate.categoryName}</td>
                         <%-- 				<td><c:if test="${cate.status==1}">
                                                 <span class="badge bg-success">Hoạt động</span>

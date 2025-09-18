@@ -17,11 +17,12 @@ import java.io.Serializable;
 public class Video implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int videoId;
+    @Column(name = "video_id")
+    private int id;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false, name = "video_name")
     private String videoName;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false, name = "video_url")
     private String videoUrl;
 }

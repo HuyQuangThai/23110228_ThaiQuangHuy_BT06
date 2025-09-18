@@ -8,6 +8,12 @@ import java.util.Optional;
 
 public  interface UserService  {
 
+    List<User> findByUsernameContaining(String username);
+
+    List<User> findByEmailContaining(String email);
+
+    List<User> findByPhoneContaining(String phone);
+
     <S extends User> List<S> findAll(Example<S> example);
 
     <S extends User> S save(S entity);
@@ -15,4 +21,8 @@ public  interface UserService  {
     void deleteById(Integer integer);
 
     Optional<User> findByUsernameAndPassword(String username, String password);
+
+    Optional<User> findById(Integer integer);
+
+    List<User> findAll();
 }

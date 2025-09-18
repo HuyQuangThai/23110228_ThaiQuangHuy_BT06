@@ -32,6 +32,8 @@ public class User implements java.io.Serializable {
 
     @Column(nullable = true, columnDefinition = "NVARCHAR(MAX)")
     private String images;
+
+
     @Column
     private int role;
 }
